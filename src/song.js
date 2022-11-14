@@ -41,6 +41,32 @@ I don't know why she swallowed a fly - perhaps she'll die!
 There was an old lady who swallowed a horse...
 ...She's dead, of course!`;
 
-console.log(song);
+const animals = [
+  'fly',
+  'spider',
+  'bird',
+  'cat',
+  'dog',
+  'cow',
+  'horse'
+];
 
-module.exports = {};
+const newAnimals = [
+  'mosquito',
+  'snake',
+  'tiger',
+  'bull',
+  'leopard',
+  'turtle',
+  'shark'
+];
+
+let newSong = song;
+
+for (let index = 0; index < animals.length; index++) {
+  newSong = newSong.replaceAll(animals[index], newAnimals[index]);
+}
+
+console.log(newSong);
+
+module.exports = { song, animals, newAnimals, newSong };
